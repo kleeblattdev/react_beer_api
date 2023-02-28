@@ -1,0 +1,13 @@
+nav{
+    position: fixed;
+    bottom: 0;
+    background-color: #FFCA41;
+    left: 0;
+    right: 0;
+}
+
+#homeBtn{
+    display: inline-block;
+    position: relative;
+    left: 40%;
+}
