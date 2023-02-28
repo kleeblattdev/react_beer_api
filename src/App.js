@@ -20,6 +20,7 @@ function App() {
           <Route path='/' element={<Landingpage/>}/>
           <Route path='/beers' element={<Beerlist/>}/>
           <Route path='/beers/:beerId' element={<Beerdetail/>}/>
+          <Route path='/beers/random/:beerId' element={<Beerdetail/>}/>
         </Routes>
     </div>
   );

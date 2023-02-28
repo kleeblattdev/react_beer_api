@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const AllBeer = () => {
     return ( 
         <article>
-            <Link to='/beers/'>
+            <Link to='/beers/random'>
                 <img src={randombeer} alt="" />
                 <h2>All Beers</h2>
             </Link>
