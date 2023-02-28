@@ -12,6 +12,7 @@ import './App.css';
 import Landingpage from './pages/Landingpage';
 import Beerlist from './pages/Beerlist';
 import Beerdetail from './pages/Beerdetail';
+import RandomBeerPage from './pages/RandomBeerPage';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path='/' element={<Landingpage/>}/>
           <Route path='/beers' element={<Beerlist/>}/>
           <Route path='/beers/:beerId' element={<Beerdetail/>}/>
-          <Route path='/beers/random/:beerId' element={<Beerdetail/>}/>
+          <Route path='/beers/random' element={<RandomBeerPage/>}/>
         </Routes>
     </div>
   );

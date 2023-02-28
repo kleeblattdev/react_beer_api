@@ -1,24 +1,24 @@
 //file import
-// Library Imports
-import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react"
+
+//library import
+import { useState, useEffect } from "react";
 
 //components import
-import Navbar from '../components/navbar/Navbar.js';
-import BackBtn from '../components/backBtn/BackBtn.js';
+import BackBtn from "../components/backBtn/BackBtn";
+import Navbar from "../components/navbar/Navbar";
 
-const Beerdetail = () => {
-    const params = useParams()
+const RandomBeerPage = () => {
 
-    const [detail,setDetail] = useState({});
+    const [detail,setDetail] = useState([]);
 
     useEffect(() => {
-        fetch(`https://ih-beers-api2.herokuapp.com/beers/${params.beerId}`)
+        fetch(`https://ih-beers-api2.herokuapp.com/beers/random`)
         .then(response => response.json())
         .then(data => {
             setDetail(data)
         })
-},[params.beerId])
+},[])
+console.log(detail)
 
     return ( 
         <main>
@@ -30,9 +30,9 @@ const Beerdetail = () => {
             <p>{detail.description}</p>
             <p>Contributed by: {detail.contributed_by}</p>
             <BackBtn/>
-            <Navbar></Navbar>
+            <Navbar/>
         </main>
     );
 }
 
-export default Beerdetail;
+export default RandomBeerPage;
